@@ -1,0 +1,14 @@
+.title{
+    flex-grow: 1;
+    font-weight: 250 !important;
+    font-family: inherit !important;
+    font-size: 2rem !important;
+    letter-spacing: 0.05em;
+}
+.logout{
+    color: white !important;
+}
+.store{
+    font-size: 10px !important;
+    font-style: italic !important;
+}

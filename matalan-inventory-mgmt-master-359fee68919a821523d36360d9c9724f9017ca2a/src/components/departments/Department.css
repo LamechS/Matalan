@@ -1,0 +1,13 @@
+.department{
+    margin-top: 20px !important;
+}
+.paper{
+    padding: 10px;
+    width: 200px;
+    margin: 10px;    
+}
+.tag{
+    font-size: 10px;
+    margin-bottom: -20px !important;
+    font-style: italic;
+}

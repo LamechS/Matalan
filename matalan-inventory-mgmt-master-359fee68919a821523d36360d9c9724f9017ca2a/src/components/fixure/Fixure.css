@@ -1,0 +1,25 @@
+.fixurethumb{
+    display: flex;
+    padding: 10px;
+}
+.fixureimg{
+    width: 100px;
+    height: 100px;
+    min-width: 100px;
+    min-height: 100px;
+}
+.fixuredetails{
+    display: flex;
+    flex-direction: column;
+}
+.fixuretitle{
+    flex: 1 0 auto;
+}
+.fixurename{
+    font-family: inherit !important;
+    color: #eb0000;
+    font-weight: 300 !important;
+}
+.fixurecount{
+    min-width: 120px !important;
+}

@@ -1,0 +1,18 @@
+.avator {
+    margin: 20px;
+    width: 100px !important;
+    height: 100px !important;
+    border: 2px solid #eb0000;
+}
+
+.names{
+    font-family: inherit !important;
+    color: #eb0000;
+    margin-top: -15px !important;
+}
+
+.divisiontitle{
+    font-family: inherit !important;
+    color: #eb0000;
+    margin-top: 10px !important;
+}
