@@ -91,7 +91,6 @@ class ReportView extends Component {
                     storeid.push(stid);
                     storeDetails.push(stid + "," + stn);
                     this.setState({ [stid]: stn });
-                    console.log(this.state[stid]);
                 }
             });
             const divisionDetails = [];
@@ -102,7 +101,6 @@ class ReportView extends Component {
                     if (typeof stn === 'undefined') {
                         console.log("Invalid credentials");
                     } else {
-                        console.log(stn);
                         divisions.push(stn);
                         for (var k = 0; k < storeid.length; k++) {
                             const deptStatus = doc.get(storeid[k] + "_" + de);
@@ -155,15 +153,15 @@ class ReportView extends Component {
                                                 const deptStatus = doc.get(storeid[k] + "_" + de);
                                                 if (typeof deptStatus === 'undefined') {
                                                     finaldoc.push(storeDetails[k] + "," + doc._document.key.path.segments[6] + "," + doc._document.key.path.segments[8] + "," + stn + ",NA,");
-                                                    console.log(storeDetails[k] + "," + doc._document.key.path.segments[6] + "," + doc._document.key.path.segments[8] + "," + stn + ",NA");
+                                                    //console.log(storeDetails[k] + "," + doc._document.key.path.segments[6] + "," + doc._document.key.path.segments[8] + "," + stn + ",NA");
                                                 } else {
                                                     finaldoc.push(storeDetails[k] + "," + doc._document.key.path.segments[6] + "," + doc._document.key.path.segments[8] + "," + stn + "," + deptStatus + ",");
-                                                    console.log(storeDetails[k] + "," + doc._document.key.path.segments[6] + "," + doc._document.key.path.segments[8] + "," + stn + "," + deptStatus);
+                                                    //console.log(storeDetails[k] + "," + doc._document.key.path.segments[6] + "," + doc._document.key.path.segments[8] + "," + stn + "," + deptStatus);
                                                 }
                                                 if ((doc._document.key.path.segments[6] === divisions[divisions.length-1]) && (doc._document.key.path.segments[8] === departments[departments.length-1]) && (k == storeid.length-1)&& (downloadReport === 'true')) {
                                                     downloadReport='fasle';
                                                     var csvString = finaldoc.join("\n");
-                                                    console.log(csvString);
+                                                    //console.log(csvString);
                                                     const blob = new Blob([csvString], { type: 'text/csv' });
                                                     const url = window.URL.createObjectURL(blob);
                                                     const a = document.createElement('a');
@@ -182,11 +180,9 @@ class ReportView extends Component {
                                             }
                                         }
                                     });
-                                    console.log("EEEEEEE !!!!!!!!!!!");
-
                                 });
                             }
-                        } console.log("This should be right target");
+                        } 
                     });
                 }
             });
